@@ -72,9 +72,10 @@
       <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,443" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,597" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Name" />
+      <Variable x:TypeArguments="x:String" Name="UserName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -90,6 +91,10 @@
         <InArgument x:TypeArguments="x:String">K Pruthviraj</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[Name]" />
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter Name" Title="Enter Name">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[UserName]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
   </Sequence>
 </Activity>
